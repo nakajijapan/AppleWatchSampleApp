@@ -1,4 +1,4 @@
-Simple Application of Apple Watch
+Simple Application for Apple Watch
 ==============
 
 ![](./demo.gif)
