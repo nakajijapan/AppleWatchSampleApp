@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="Td5-yI-gsI">
+                            <items>
+                                <tableRow identifier="MIRow" id="0Yx-jr-GEm" customClass="MIRow" customModule="watch_Extension">
+                                    <group key="rootItem" width="1" height="139.5" alignment="left" layout="vertical" id="ruV-8n-nU0">
+                                        <items>
+                                            <imageView width="136" height="88" alignment="left" animationDuration="1" id="QnU-lc-63d"/>
+                                            <label width="123" height="41" alignment="left" text="titletitletitletitletitletitle" textAlignment="left" numberOfLines="0" id="imk-tl-aVt">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="S1u-tZ-g0G" kind="push" id="w5R-LU-vfZ"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imageIcon" destination="QnU-lc-63d" id="0dK-O0-3uS"/>
+                                        <outlet property="labelName" destination="imk-tl-aVt" id="wtr-Me-UoR"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="loading..." id="VwJ-ig-g74">
+                            <connections>
+                                <action selector="didPushButtonMore" destination="AgC-eL-Hgc" id="6mE-N9-fr0"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonMore" destination="VwJ-ig-g74" id="Pp6-ql-g5r"/>
+                        <outlet property="table" destination="Td5-yI-gsI" id="sgs-ir-98L"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="9Nt-uH-fHv">
+            <objects>
+                <controller identifier="DetailInterfaceController" title="Detail" id="S1u-tZ-g0G" customClass="DetailInterfaceController" customModule="watch_Extension">
+                    <items>
+                        <imageView width="1" alignment="left" id="hrQ-dz-S1D"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="1HV-Mg-qNQ"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageItem" destination="hrQ-dz-S1D" id="1Av-D8-AAV"/>
+                        <outlet property="labelTitle" destination="1HV-Mg-qNQ" id="G4x-zw-WrG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="469" y="325"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,9 +1,9 @@
 //
 //  MIRow.swift
-//  watch
+//  AppleWatchSample
 //
-//  Created by nakajijapan on 5/4/15.
-//  Copyright (c) 2015 net.nakajijapan. All rights reserved.
+//  Created by nakajijapan on 2017/01/07.
+//  Copyright © 2017年 nakajijapan. All rights reserved.
 //
 
 import WatchKit
@@ -11,5 +11,5 @@ import WatchKit
 class MIRow: NSObject {
     @IBOutlet weak var labelName: WKInterfaceLabel!
     @IBOutlet weak var imageIcon: WKInterfaceImage!
-   
+    
 }
