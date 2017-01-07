@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  watch
+//  AppleWatchSample
 //
-//  Created by nakajijapan on 5/3/15.
-//  Copyright (c) 2015 net.nakajijapan. All rights reserved.
+//  Created by nakajijapan on 2017/01/07.
+//  Copyright © 2017年 nakajijapan. All rights reserved.
 //
 
 import UIKit
